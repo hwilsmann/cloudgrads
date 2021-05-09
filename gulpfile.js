@@ -19,7 +19,7 @@ var paths={
     },
     html:{
         src:'./src/*.html',
-        dest:'./dist/'
+        dest:'./'
     }
 };
 

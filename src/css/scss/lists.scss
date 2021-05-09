@@ -1,0 +1,220 @@
+@import 'variables';
+
+.list--data{
+    display:flex;
+    flex-wrap:wrap;
+    margin:-10px;
+    @media only screen and (max-width:768px){
+        margin:0;
+    }
+    .item{
+        width:calc(100% / 3);
+        padding:10px;
+        @media only screen and (max-width:768px){
+            width:100%;
+            margin:0 0 25px 0;
+            padding:0;
+            &:last-of-type{
+                margin:0;
+            }
+        }
+        &:hover{
+            a{
+                background-color:$color-1;
+            }
+        }
+        a{
+            background-color:$white;
+            box-shadow:$box-shadow;
+            display:block;
+            height:100%;
+            padding:60px;
+            transition:background-color $transition;
+            @media only screen and (max-width:768px){
+                padding:50px 25px;
+            }
+            .title{
+                color:$color-2;
+                margin:0 0 25px 0;
+            }
+            .description{
+                margin:0 0 44px 0;
+                min-height:72px;
+                @media only screen and (max-width:768px){
+                    margin:0 0 25px 0;
+                    min-height:initial;
+                }
+            }
+            .button{
+                align-items:center;
+                color:$color-2;
+                display:flex;
+                font-weight:700;
+                font-size:18px;
+                .arrow{
+                    background-color:$color-2;
+                    &:before,
+                    &:after{
+                        background-color:$color-2;
+                    }
+                }
+            }
+        }
+    }
+}
+.list--test{
+    box-shadow:$box-shadow;
+    display:flex;
+    flex-wrap:wrap;
+    width:100%;
+    max-width:888px;
+    .item{
+        width:calc(100% / 2);
+        background-color:$white;
+        padding:80px;
+        @media only screen and (max-width:768px){
+            width:100%;
+            padding:50px 25px;
+        }
+        .porcentage{
+            align-items:center;
+            display:flex;
+            font-family:$font-secondary;
+            font-size:88px;
+            letter-spacing:-1px;
+            margin:0 0 15px 0;
+            small{
+                color:$color-1;
+                font-size:44px;
+                margin:0 0 0 10px;
+            }
+        }
+        .description{
+            font-size:20px;
+            margin:0 0 15px 0;
+            @media only screen and (max-width:768px){
+                font-size:16px;
+            }
+        }
+        .date{
+            display:block;
+            font-size:16px;
+        }
+    }
+}
+.list--how-we-build{
+    display:flex;
+    flex-wrap:wrap;
+    margin:-40px;
+    @media only screen and (max-width:768px){
+        margin:0;
+    }
+    .item{
+        width:calc(100% / 3);
+        padding:40px;
+        @media only screen and (max-width:768px){
+            width:100%;
+            margin:0 0 25px 0;
+            padding:0;
+            &:last-of-type{
+                margin:0;
+            }
+        }
+        .number{
+            color:$color-1;
+            display:block;
+            font-family:$font-secondary;
+            font-size:44px;
+            letter-spacing:-.5px;
+            margin:0 0 25px 0;
+        }
+        .subtitle{
+            border-bottom:1px solid $color-7;
+            color:$color-2;
+            display:block;
+            font-size:16px;
+            letter-spacing:-.1px;
+            margin:0 0 25px 0;
+            padding:0 0 25px 0;
+        }
+    }
+}
+.list--meet-our-cloudgrads{
+    display:flex;
+    flex-wrap:wrap;
+    margin:-40px;
+    @media only screen and (max-width:768px){
+        margin:0;
+    }
+    .item{
+        width:calc(100% / 2);
+        padding:40px;
+        @media only screen and (max-width:768px){
+            width:100%;
+            margin:0 0 25px 0;
+            padding:0;
+            &:last-of-type{
+                margin:0;
+            }
+        }
+        .row{
+            display:flex;
+            @media only screen and (max-width:768px){
+                flex-wrap:wrap;
+            }
+            .image{
+                min-width:160px;
+                @media only screen and (max-width:768px){
+                    width:100%;
+                    margin:0 0 25px 0;
+                    min-width:initial;
+                }
+            }
+            .content{
+                margin:0 0 0 50px;
+                @media only screen and (max-width:768px){
+                    margin:0;
+                }
+                .name{
+                    color:$color-2;
+                    margin:0 0 5px 0;
+                }
+                .role{
+                    color:$color-2;
+                    display:block;
+                    font-size:16px;
+                    margin:0 0 25px 0;
+                }
+                .about{
+                    .subtitle{
+                        display:block;
+                        font-size:16px;
+                        margin:0 0 25px 0;
+                    }
+                    .description{
+                        margin:0 0 25px 0;
+                        &:last-of-type{
+                            margin:0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.list--social{
+    align-items:center;
+    display:flex;
+    flex-wrap:wrap;
+    margin:-25px;
+    .item{
+        margin:25px;
+        a{
+            display:block;
+            svg{
+                fill:$color-1;
+                height:18px;
+            }
+        }
+    }
+}

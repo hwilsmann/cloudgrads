@@ -1,0 +1,90 @@
+@import 'variables';
+
+.nav--bar-drop{
+	background-color:$color-4;
+    color:$white;
+    display:none;
+    height:calc(100vh - 58px);
+	width:100%;
+	left:0;
+	position:absolute;
+	top:58px;
+	z-index:999;
+	&.is--open{
+		display:block;
+	}
+	.nav--menu-drop{
+        margin:0 0 25px 0;
+		.list--menu-drop{
+			>.item{
+				border-bottom:1px solid $color-5;
+				&:last-of-type{
+					border:none;
+				}
+                &.has--drop{
+                    >a{
+                        &:after{
+                            display:block;
+                        }
+                    }
+                }
+                &.is--open{
+                    >a{
+                        &:after{
+                            transform:rotate(-135deg) translateX(-50%);
+                        }
+                    }
+                    .list--drop{
+                        display:block;
+                    }
+                }
+				>a{
+					display:block;
+					font-weight:700;
+					letter-spacing:.2px;
+					line-height:4;
+                    position:relative;
+					text-transform:uppercase;
+                    &:after{
+                        border-bottom:2px solid $white;
+                        border-right:2px solid $white;
+                        content:"";
+                        display:none;
+                        height:8px;
+                        width:8px;
+                        position:absolute;
+                        right:5px;
+                        top:50%;
+                        transform:rotate(45deg) translateY(-50%);
+                    }
+				}
+                .list--drop{
+                    display:none;
+                    padding:0 0 25px 0;
+                    >.item{
+                        >a{
+                            display:block;
+                            font-size:16px;
+                            line-height:3;
+                        }
+                    }
+                }
+			}
+		}
+	}
+    .list--social{
+        justify-content:center;
+        .item{
+            margin:0;
+            a{
+                padding:25px;
+            }
+        }
+    }
+    .copyright{
+        display:block;
+        line-height:1.5;
+        margin:25px 0 0 0;
+        text-align:center;
+    }
+}

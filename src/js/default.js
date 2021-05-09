@@ -1,38 +1,24 @@
 //
-var wow = new WOW(
-    {
-        mobile:false
-    }
-);
-wow.init();
+var body = $('body');
+var nav_bar = $('.nav--bar');
+var nav_bar_drop = $('.nav--bar-drop');
+var overlay = $('.overlay');
 
-//
-$('.gallery--banner').owlCarousel({
-    autoplay:true,
-    dots:true,
-    items:1,
-    loop:true,
-    nav:false,
-    smartSpeed:1100
-});
-$('.gallery--test').owlCarousel({
-    autoplay:true,
-    dots:false,
-    items:1,
-    loop:true,
-    nav:true,
-    smartSpeed:1100
-});
-
-//
-$('.nav--bar').on('click',function(){
+nav_bar.on('click',function(){
     if ($(this).hasClass('is--open')){
         $(this).removeClass('is--open');
-        $('.nav--bar--drop').removeClass('is--open');
-        $('.overlay').removeClass('is--open');
+        nav_bar_drop.removeClass('is--open');
+        overlay.removeClass('is--open');
+        body.removeClass('drop--is-open');
     }else{
         $(this).addClass('is--open');
-        $('.nav--bar--drop').addClass('is--open');
-        $('.overlay').addClass('is--open');
+        nav_bar_drop.addClass('is--open');
+        overlay.addClass('is--open');
+        body.addClass('drop--is-open');
     }
+});
+//
+var has_drop = $('.nav--menu-drop .has--drop>a');
+has_drop.on('click',function(){
+    $(this).parent().toggleClass("is--open");    
 });
