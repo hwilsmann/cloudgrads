@@ -481,7 +481,7 @@
             flex-wrap:wrap;
         }
         .image{
-            margin:-140px auto -180px -318px;
+            margin:-140px auto -180px -98px;
             position:relative;
             z-index:1;
             @media only screen and (max-width:768px){
@@ -494,6 +494,7 @@
             padding:0 119px 0 0;
             @media only screen and (max-width:768px){
                 margin:25px 0 0 0;
+                max-width:initial;
                 padding:0;
             }
             .title{
@@ -590,6 +591,7 @@
         justify-content:space-between;
         @media only screen and (max-width:768px){
             flex-wrap:wrap;
+            justify-content:center;
         }
         .image{
             @media only screen and (max-width:768px){
@@ -601,6 +603,7 @@
             max-width:507px;
             @media only screen and (max-width:768px){
                 font-size:16px;
+                max-width:initial;
             }
         }
     }
