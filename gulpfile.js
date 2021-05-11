@@ -6,6 +6,7 @@ var uglify = require("gulp-uglify");
 var babel = require("gulp-babel");
 var concat = require("gulp-concat");
 var autoprefixer = require("gulp-autoprefixer");
+var imagemin = require("gulp-imagemin");
 
 // Paths
 var paths={
@@ -20,6 +21,10 @@ var paths={
     html:{
         src:'./src/*.html',
         dest:'./'
+    },
+    images:{
+        src:'./src/images/*',
+        dest:'./dist/images/'
     }
 };
 
@@ -27,6 +32,7 @@ var paths={
 gulp.task("scripts",scripts);
 gulp.task("styles",styles);
 gulp.task("html",html);
+gulp.task("images",images);
 gulp.task("default",watch);
 
 // Scripts
@@ -59,9 +65,17 @@ function html(){
     .pipe(gulp.dest(paths.html.dest));
 }
 
+// Images
+function images(){
+    return gulp.src(paths.images.src)
+    .pipe(imagemin())
+    .pipe(gulp.dest(paths.images.dest));
+}
+
 // Watch
 function watch(){
     gulp.watch(paths.scripts.src,scripts);
     gulp.watch(paths.styles.src,styles);
     gulp.watch(paths.html.src,html);
+    gulp.watch(paths.images.src,images);
 }
