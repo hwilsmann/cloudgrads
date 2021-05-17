@@ -14,6 +14,14 @@
         @media only screen and (max-width:768px){
             justify-content:initial;
         }
+        .logo {
+            img {
+                height: 32px;
+                @media only screen and (max-width:425px){
+                    height: 28px;
+                }
+            }
+        }
         .nav--menu{
             margin:0 0 0 auto;
             @media only screen and (max-width:768px){

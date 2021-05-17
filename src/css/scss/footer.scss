@@ -24,6 +24,14 @@
                     @media only screen and (max-width:768px){
                         margin:0 0 50px 0;
                     }
+                    .logo {
+                        img {
+                            width: 138px;
+                            @media only screen and (max-width:425px){
+                                width: 68px;
+                            }
+                        }
+                    }
                 }
                 &.column--2{
                     width:100%;
