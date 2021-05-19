@@ -62,6 +62,11 @@ body{
 			background-color:$color-4;
 			color:$white;
 			.row{
+				.logo{
+					svg{
+						fill:$white;
+					}
+				}
 				.nav--bar{
 					.bar{
 						background-color:$white;
