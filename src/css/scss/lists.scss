@@ -223,18 +223,40 @@
     display:flex;
     flex-wrap:wrap;
     margin:-40px -8px;
+    @media only screen and (max-width:414px){
+        margin:0;
+    }
     &.four--columns{
         .item{
             width:calc(100% / 4);
+            @media only screen and (max-width:768px){
+                width:calc(100% / 2);
+            }
+            @media only screen and (max-width:414px){
+                width:100%;
+            }
         }
     }
     &.three--columns{
         .item{
             width:calc(100% / 3);
+            @media only screen and (max-width:768px){
+                width:calc(100% / 2);
+            }
+            @media only screen and (max-width:414px){
+                width:100%;
+            }
         }
     }
     .item{
         padding:40px 8px;
+        @media only screen and (max-width:414px){
+            margin:0 0 25px 0;
+            padding:0;
+            &:last-of-type{
+                margin:0;
+            }
+        }
         .image{
             display:block;
             margin:0 0 25px 0;
@@ -261,6 +283,9 @@
             font-size:18px;
             width:max-content;
             margin:15px 0 0 0;
+            @media only screen and (max-width:768px){
+                font-size:16px;
+            }
             .arrow{
                 background-color:$color-9;
                 &:before,
