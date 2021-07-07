@@ -219,3 +219,210 @@
         }
     }
 }
+.list--team{
+    display:flex;
+    flex-wrap:wrap;
+    margin:-40px -8px;
+    &.four--columns{
+        .item{
+            width:calc(100% / 4);
+        }
+    }
+    &.three--columns{
+        .item{
+            width:calc(100% / 3);
+        }
+    }
+    .item{
+        padding:40px 8px;
+        .image{
+            display:block;
+            margin:0 0 25px 0;
+            padding:0 0 100% 0;
+            position:relative;
+            img{
+                height:100%;
+                width:100%;
+                left:0;
+                object-fit:cover;
+                position:absolute;
+                top:0;
+            }
+        }
+        .name{
+            display:block;
+            margin:0 0 8px 0;
+        }
+        .send--e-mail{
+            align-items:center;
+            color:$color-9;
+            display:flex;
+            font-weight:700;
+            font-size:18px;
+            width:max-content;
+            margin:15px 0 0 0;
+            .arrow{
+                background-color:$color-9;
+                &:before,
+                &:after{
+                    background-color:$color-9;
+                }
+            }
+        }
+    }
+}
+.list--partners{
+    display:flex;
+    flex-wrap:wrap;
+    margin:-40px;
+    @media only screen and (max-width:768px){
+        margin:0;
+    }
+    .item{
+        width:calc(100% / 2);
+        padding:40px;
+        text-align:center;
+        @media only screen and (max-width:768px){
+            width:100%;
+            margin:0 0 25px 0;
+            padding:0;
+            &:last-of-type{
+                margin:0;
+            }
+        }
+        .image{
+            align-items:center;
+            display:flex;
+            justify-content:center;
+            margin:0 0 120px 0;
+            min-height:86px;
+            @media only screen and (max-width:768px){
+                margin:0 0 25px 0;
+                min-height:initial;
+            }
+            img{
+                filter:grayscale(1);
+                @media only screen and (max-width:768px){
+                    max-width:75%;
+                }
+            }
+        }
+        .description{
+            text-align:left;
+            p{
+                margin:0 0 25px 0;
+                &:last-of-type{
+                    margin:0;
+                }
+                b{
+                    color:$color-2;
+                    font-style:italic;
+                }
+            }
+        }
+    }
+}
+.list--universities{
+    .item{
+        align-items:center;
+        display:flex;
+        justify-content:space-between;
+        margin:0 0 60px 0;
+        @media only screen and (max-width:768px){
+            flex-wrap:wrap;
+            margin:0 0 25px 0;
+        }
+        &:nth-of-type(2n){
+            flex-direction:row-reverse;
+        }
+        &:last-of-type{
+            margin:0;
+        }
+        .content{
+            max-width:779px;
+            .title{
+                color:$color-2;
+                margin:0 0 40px 0;
+                @media only screen and (max-width:768px){
+                    margin:0 0 25px 0;
+                }
+            }
+            .description{
+                p{
+                    color:$color-2;
+                    font-weight:700;
+                    font-style:italic;
+                    margin:0 0 25px 0;
+                    &:last-of-type{
+                        margin:0;
+                    }
+                }
+            }
+        }
+        .image{
+            img{
+                filter:grayscale(1);
+            }
+        }
+    }
+}
+.list--news{
+    display:flex;
+    flex-wrap:wrap;
+    margin:-40px -8px;
+    @media only screen and (max-width:414px){
+        margin:0;
+    }
+    .item{
+        width:calc(100% / 3);
+        padding:40px 8px;
+        @media only screen and (max-width:768px){
+            width:calc(100% / 2);
+        }
+        @media only screen and (max-width:414px){
+            width:100%;
+            margin:0 0 25px 0;
+            padding:0;
+            &:last-of-type{
+                margin:0;
+            }
+        }
+        a{
+            display:block;
+            .image{
+                display:block;
+                margin:0 0 40px 0;
+                padding:0 0 100% 0;
+                position:relative;
+                @media only screen and (max-width:414px){
+                    margin:0 0 25px 0;
+                }
+                img{
+                    height:100%;
+                    width:100%;
+                    left:0;
+                    object-fit:cover;
+                    position:absolute;
+                    top:0;
+                }
+            }
+            .subtitle{
+                margin:0 0 15px 0;
+            }
+            .read--more{
+                align-items:center;
+                color:$color-2;
+                display:flex;
+                font-weight:700;
+                font-size:18px;
+                .arrow{
+                    background-color:$color-2;
+                    &:before,
+                    &:after{
+                        background-color:$color-2;
+                    }
+                }
+            }
+        }
+    }
+}
